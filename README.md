@@ -1,1 +1,0 @@
-# VektorStal.github.io
