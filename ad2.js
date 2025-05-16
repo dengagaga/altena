@@ -55,3 +55,19 @@ formBtn.onclick = (e) => {
       }
   })
 }
+
+
+const modalGlavBtn = document.querySelector('.modal__btn') 
+const modalGlavInputs = document.querySelectorAll('.modal__input') 
+
+modalGlavBtn.onclick = (e) => {
+  modalGlavInputs.forEach(inp => {
+    if (inp.value == '') {
+      e.preventDefault()
+      inp.classList.add('modal__input--error')
+    } else {
+      inp.classList.remove('modal__input--error')
+    }
+  })
+ 
+}
