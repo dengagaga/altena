@@ -1636,7 +1636,7 @@ body {
     font-weight: 600;
 }
 .power_stage-list svg {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     transform: rotate(-90deg)
 }
 .power_stage-item h4 {
@@ -1738,6 +1738,7 @@ body {
 }
 .form_check-input {
     margin-top: 3px;
+
 }
 .form_check-label {
     color: #5f6b76;
@@ -1749,8 +1750,12 @@ body {
     color: #0053a5;
     text-decoration: underline!important;
 }
-
-
+.form_inp--error {
+    border:1px solid red;
+}
+.form_check-label--error {
+    color: red;
+}
 
 .body {
     position: relative;
@@ -1836,6 +1841,16 @@ body {
     align-items: center;
 
 }
+.modal__select {
+    width: 100%;
+    padding: 10px;
+    height: 45px;
+    font-size: 14px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #636363;
+    border-radius: 7px;
+}
 .modal__radio p{
     display: flex;
     gap: 10px;
@@ -1851,4 +1866,25 @@ body {
 .modal_flex {
     display: flex;
     gap: 30px;
+}
+
+.polit {
+    
+}
+.polit h3 {
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+}
+.polit h4 {
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 100px;
+}
+.polit p {
+    font-size: 20px;
+    color: #636363;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
 }

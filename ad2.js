@@ -24,9 +24,34 @@
 const modalClose = document.querySelector('.modal__close')
 const modalBtn = document.querySelector('.header_left-btn-2')
 const modal = document.querySelector('.modal')
-modalClose.onclick = () => {
-  modal.classList.remove('modal--active')
+if (modal) {
+  modalClose.onclick = () => {
+    modal.classList.remove('modal--active')
+  }
+  modalBtn.onclick = () => {
+    modal.classList.add('modal--active')
+  }
 }
-modalBtn.onclick = () => {
-  modal.classList.add('modal--active')
+
+
+const check = document.getElementById('check')
+const formBtn = document.querySelector('.form_btn')
+const formInps = document.querySelectorAll('.form_inp')
+const formCheckLabel = document.querySelector('.form_check-label')
+
+formBtn.onclick = (e) => {
+  if (check.checked) {
+    formCheckLabel.classList.remove('form_check-label--error')
+  } else {
+    e.preventDefault()
+    formCheckLabel.classList.add('form_check-label--error')
+  }
+  formInps.forEach(inp => {
+      if (inp.value == '') {
+        e.preventDefault()
+        inp.classList.add('form_inp--error')
+      } else {
+        inp.classList.remove('form_inp--error')
+      }
+  })
 }

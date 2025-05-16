@@ -159,13 +159,7 @@
                     <p>Проверка работы системы в различных режимах
                     </p>
                 </div>
-                <svg class="servises_item-svg" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
-                    viewBox="0 0 24 24">
-                    <g fill="none" stroke="#0053a5" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8 12.5l3 3l5-6"></path>
-                        <circle cx="12" cy="12" r="10"></circle>
-                    </g>
-                </svg>
+
             </div>
             <section class="request" id="request">
                 <div class="container">
@@ -177,17 +171,18 @@
                             <p>Наш менеджер свяжется с вами в ближайшее время</p>
                         </div>
 
-                        <form action="#" class="form">
+                        <form method="post" action="send.php" class="form">
                             <div class="form_top">
                                 <h3 class="form_title">Заполните форму</h3>
                             </div>
                             <div class="form_mid">
-                                <input type="text" class="form_inp" placeholder="Ваше имя">
-                                <input type="text" class="form_inp" placeholder="Ваш телефон">
-                                <input type="text" class="form_inp" placeholder="Ваш email">
+                                <input type="text" class="form_inp" name="name" placeholder="Ваше имя">
+                                <input type="tel" class="form_inp" name="tel" placeholder="Ваш телефон">
+                                <input type="text" class="form_inp" name="email" placeholder="Ваш email">
                                 <div class="form_check">
                                     <input class="form_check-input" type="checkbox" id="check">
-                                    <label class="form_check-label" for="check">Я согласен с <a href="">политикой
+                                    <label class="form_check-label" for="check">Я согласен с <a
+                                            href="document.html">политикой
                                             обработки</a>
                                         персональных данных и даю
                                         свое согласие на

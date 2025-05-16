@@ -30,7 +30,38 @@
                 <div class="modal_flex">
                     <div class="modal__form-inps">
                         <label for="" class="modal__label">Мощность, кВт</label>
-                        <input type="text" placeholder="Мощность, кВт" class="modal__input">
+                        <select name="" id="" class="modal__select">
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="33">33</option>
+                            <option value="35">35</option>
+                            <option value="50">50</option>
+                            <option value="55">55</option>
+                            <option value="70">70</option>
+                            <option value="80">80</option>
+                            <option value="100">100</option>
+                            <option value="120">120</option>
+                            <option value="150">150</option>
+                            <option value="160">160</option>
+                            <option value="180">180</option>
+                            <option value="200">200</option>
+                            <option value="230">230</option>
+                            <option value="260">260</option>
+                            <option value="285">285</option>
+                            <option value="350">350</option>
+                            <option value="375">375</option>
+                            <option value="400">400</option>
+                            <option value="410">410</option>
+                            <option value="500">500</option>
+                            <option value="530">530</option>
+                            <option value="555">555</option>
+                            <option value="600">600</option>
+                            <option value="800">800</option>
+                            <option value="1000">1000</option>
+                            <option value="1200">1200</option>
+                            <option value="1600">1600</option>
+                            <option value="2000">2000</option>
+                        </select>
                     </div>
                     <div class="modal__form-inps">
                         <label for="" class="modal__label">Количество ГПУ, шт.</label>
@@ -44,11 +75,31 @@
                 <div class="modal_flex">
                     <div class="modal__form-inps">
                         <label for="" class="modal__label">Исполнение</label>
-                        <input type="text" placeholder="Исполнение" class="modal__input">
+                        <select name="" id="" class="modal__select">
+                            <option class="modal__option" value="открытое для установки в помещении">
+                                открытое для установки в помещении
+                            </option>
+                            <option class="modal__option" value="в шумоглушащем кожухе для установки в помещении">
+                                в шумоглушащем кожухе для установки в помещении
+                            </option>
+                            <option class="modal__option" value="всепогодный контейнер">
+                                всепогодный контейнер
+                            </option>
+                        </select>
                     </div>
                     <div class="modal__form-inps">
                         <label for="" class="modal__label">Напряжение генератора</label>
-                        <input type="text" placeholder="Напряжение генератора" class="modal__input">
+                        <select name="" id="" class="modal__select">
+                            <option class="modal__option" value="0,4 кВ">
+                                0,4 кВ
+                            </option>
+                            <option class="modal__option" value="6,3 кВ">
+                                6,3 кВ
+                            </option>
+                            <option class="modal__option" value="10,5 кВ">
+                                10,5 кВ
+                            </option>
+                        </select>
                     </div>
                     <div class="modal__form-inps">
                         <label for="" class="modal__label">Система утилизации тепла</label>
@@ -78,10 +129,6 @@
                     <div class="modal__form-inps">
                         <label for="" class="modal__label">Цена 1 Гкал тепла от теплосетей, руб. (с НДС)</label>
                         <input type="text" placeholder="Цена 1 Гкал тепла от теплосетей" class="modal__input">
-                    </div>
-                    <div class="modal__form-inps">
-                        <label for="" class="modal__label">Калорийность газа, ккал/м³</label>
-                        <input type="text" placeholder="Калорийность газа, ккал/м³" class="modal__input">
                     </div>
                 </div>
 
@@ -473,17 +520,18 @@
                         <p>Наш менеджер свяжется с вами в ближайшее время</p>
                     </div>
 
-                    <form action="#" class="form">
+                    <form method="post" action="send.php" class="form">
                         <div class="form_top">
                             <h3 class="form_title">Заполните форму</h3>
                         </div>
                         <div class="form_mid">
-                            <input type="text" class="form_inp" placeholder="Ваше имя">
-                            <input type="text" class="form_inp" placeholder="Ваш телефон">
-                            <input type="text" class="form_inp" placeholder="Ваш email">
+                            <input type="text" class="form_inp" name="name" placeholder="Ваше имя">
+                            <input type="tel" class="form_inp" name="tel" placeholder="Ваш телефон">
+                            <input type="text" class="form_inp" name="email" placeholder="Ваш email">
                             <div class="form_check">
                                 <input class="form_check-input" type="checkbox" id="check">
-                                <label class="form_check-label" for="check">Я согласен с <a href="">политикой
+                                <label class="form_check-label" for="check">Я согласен с <a
+                                        href="document.html">политикой
                                         обработки</a>
                                     персональных данных и даю
                                     свое согласие на
