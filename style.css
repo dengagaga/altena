@@ -101,15 +101,31 @@ body {
     padding: 20px;
 }
 .header {
-    background-color: #141f20;
+    /* background-color: #141f20; */
+    background: url(./img/fonGlav.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     color: white;
     height: 100vh;
+    position: relative;
     /* padding-bottom: 80px; */
+}
+.header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a2;
+    z-index: 1;
 }
 
 .header_all {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -347,6 +363,8 @@ body {
 .header_left-btns {
     display: flex;
     gap: 40px;
+    position: relative;
+    z-index: 2;
     justify-content: center;
 }
 .header_left-btn {
@@ -1512,6 +1530,10 @@ body {
     margin-bottom: 60px;
 }
 .metal_all-top-left {
+    width: 100%;
+    max-width: 620px;
+}
+.metal_all-top-left_forUs {
     max-width: 480px;
 }
 .metal_all-top-left img {
@@ -1623,6 +1645,7 @@ body {
 }
 .power_stage-list {
     margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
