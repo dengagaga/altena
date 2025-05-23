@@ -1,14 +1,17 @@
-// const header = document.querySelector('.header')
-// const dropMobil = document.querySelector('.drop-mobil')
-// const headerBurgerBtn = document.querySelector('.header_burger-btn')
-// const navLinkDropMobil = document.querySelector('.nav_link--drop-mobil')
-// headerBurgerBtn.onclick = () => {
-//   header.classList.toggle('open')
-// }
-// navLinkDropMobil.onclick = () => {
-//   dropMobil.classList.toggle('drop-mobil--active')  
-//   navLinkDropMobil.classList.toggle('navLinkDropMobil--active')  
-// }
+
+const headerBurgerBtn = document.querySelector('.burger')
+const body = document.querySelector('body')
+const navLinkDropMobil = document.querySelector('.nav_links-mobil')
+const closes = document.querySelector('.nav_links-mobil-close')
+headerBurgerBtn.onclick = () => {
+    navLinkDropMobil.classList.toggle('nav_links-mobil--active')
+    body.style.overflow = 'hidden'
+}
+closes.onclick = () => {
+    navLinkDropMobil.classList.toggle('nav_links-mobil--active')
+     body.style.overflow = 'auto'
+}
+
 
 
 
@@ -70,4 +73,23 @@ modalGlavBtn.onclick = (e) => {
     }
   })
  
+}
+
+const modaRadioInp = document.querySelectorAll('.modal_radio_inp')
+const hiddenInp = document.querySelector('.hidden_inp')
+if (modaRadioInp) {
+modaRadioInp.forEach(inp => {
+  inp.onclick = () => {
+    modaRadioInp.forEach(inps => {
+      inps.checked = false
+    })
+    inp.checked = true
+    if (inp.checked) {
+      hiddenInp.value = inp.value
+      console.log(hiddenInp.value);
+      hiddenInp.textContent = inp.value
+      
+    }
+  }
+})
 }
